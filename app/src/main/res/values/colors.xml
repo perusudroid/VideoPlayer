@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="fullRed">#EC5745</color>
+    <color name="lightRed">#f18173</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="weatherAccent">#84ceca</color>
+
+    <color name="grayIconTint">#727272</color>
+
+    <color name="window_background">#E0E0E0</color>
+    <color name="primary_text">#FFFFFF</color>
+    <color name="secondary_text">#EC5745</color>
+    <color name="toro_black">#E0E0E0</color>
+    <color name="list_divider">#FFFFFF</color>
+    <color name="list_item_selected_state">#0EB1AF</color>
+    <color name="list_item_normal_state">#757575</color>
+
+    <color name="theme_primary">#2196F3</color>
+    <color name="theme_primary_dark">#1976D2</color>
+    <color name="theme_primary_light">#BBDEFB</color>
+    <color name="fullWhite">#FFFFFF</color>
+    <color name="lightOrange">#FFA486</color>
+    <color name="meGreen">#0C9D09</color>
+    <color name="border_feed_1">#EA5490</color>
+    <color name="border_yellow_3">#0EB1AF</color>
+    <color name="theme_background">#FFFFFF</color>
+    <color name="theme_background_inverse">#212121</color>
+
+    <color name="one_round">#9ccc65</color>
+    <color name="two_round">#a1887f</color>
+    <color name="three_round">#90a4ae</color>
+    <color name="four_round">#7986cb</color>
+
+    <color name="theme_accent_1">#212121</color>
+
+    <color name="theme_primary_trans">#99212121</color>
+
+    <color name="theme_primary_text">#212121</color>
+    <color name="theme_secondary_text">#727272</color>
+    <color name="theme_primary_text_inverted">#ffffff</color>
+    <color name="theme_secondary_text_inverted">#8affffff</color>
+    <color name="theme_icons">#FFFFFF</color>
+    <color name="theme_divider">#B6B6B6</color>
+
+    <color name="separator_line">#ECECEC</color>
+    <color name="title">#222222</color>
+    <color name="subtitle">#999999</color>
+
+    <color name="toolbar_start_color">#815ef8</color>
+    <color name="toolbar_end_color">#ac5ffc</color>
+
+    <color name="dialog_start_color">#EE6708</color>
+    <color name="dialog_center_color">#EB4A2C</color>
+    <color name="dialog_end_color">#EB2658</color>
+
+    <color name="error_start_color">#E11651</color>
+    <color name="error_center_color">#EB2658</color>
+    <color name="error_end_color">#FF486e</color>
+
+    <color name="update_start_color">#15A08D</color>
+    <color name="update_center_color">#24C286</color>
+    <color name="update_end_color">#24C286</color>
+
+    <color name="toolbar_color_palette1_start_color">#0659c4</color>
+    <color name="toolbar_color_palette1_end_color">#22a7f6</color>
+
+    <color name="toolbar_color_palette2_start_color">#ce4c4c</color>
+    <color name="toolbar_color_palette2_end_color">#f85e5e</color>
+
+
+    <integer-array name="dialog_update_paletee">
+        <item>@color/update_start_color</item>
+        <item>@color/update_center_color</item>
+        <item>@color/update_end_color</item>
+    </integer-array>
+
+    <integer-array name="dialog_color_error">
+        <item>@color/error_start_color</item>
+        <item>@color/error_center_color</item>
+        <item>@color/error_end_color</item>
+    </integer-array>
+
+    <color name="contact_name">#333333</color>
+    <color name="contact_number">#8c8c8c</color>
+
+    <integer-array name="dialog_color_palette_default">
+        <item>@color/dialog_start_color</item>
+        <item>@color/dialog_center_color</item>
+        <item>@color/dialog_end_color</item>
+    </integer-array>
+
+    <integer-array name="toolbar_color_palette_default">
+        <item>@color/toolbar_start_color</item>
+        <item>@color/toolbar_end_color</item>
+    </integer-array>
+
+    <integer-array name="toolbar_color_palette1">
+        <item>@color/toolbar_color_palette1_start_color</item>
+        <item>@color/toolbar_color_palette1_end_color</item>
+    </integer-array>
+
+    <integer-array name="toolbar_color_palette2">
+        <item>@color/toolbar_color_palette2_start_color</item>
+        <item>@color/toolbar_color_palette2_end_color</item>
+    </integer-array>
+
+
+    <integer-array name="drawer_color_palette">
+        <item>@color/toolbar_start_color</item>
+        <item>@color/toolbar_end_color</item>
+    </integer-array>
+
+    <integer-array name="colors">
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_yellow_dark</item>
+        <item>@color/holo_green_dark</item>
+        <item>@color/holo_purple_dark</item>
+        <item>@color/holo_red_dark</item>
+    </integer-array>
+    <color name="recycler_background">#FFFFFF</color>
+   <!-- <color name="recycler_background">#EEEEEE</color>-->
+
+    <!--  <color name="border_page_1">#FF5A00</color>
+      <color name="border_page_2">#FC7417</color>
+      <color name="border_page_3">#F89D3B</color>-->
+
+    <color name="border_page_1">#F81655</color>
+    <color name="border_page_2">#F46D3A</color>
+    <color name="border_page_3">#FFC300</color>
+
+
+    <color name="green009ca1">#009ca1</color>
+    <color name="gray8b99aa">#8b99aa</color>
+    <color name="steper_view_gray">#4e6178</color>
+    <color name="default_text_color">#4e6178</color>
+
+    <color name="textColor">#ff757575</color>
+    <color name="lightBlack">#464646</color>
+    <color name="lightWhite">#E0E0E0</color>
+
+
+    <color name="lineColor">#D2D2D2</color>
+    <color name="lineColor1">#4daaaaaa</color>
+    <color name="lineColor2">#ededed</color>
+    <color name="lineColor3">#B7B7B7</color>
+
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <integer-array name="pocket_bar_colors">
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+        <item>@color/pocket_color_4</item>
+    </integer-array>
+
+    <integer-array name="pocket_background_colors">
+        <item>@color/pocket_color_1</item>
+        <item>@color/pocket_color_2</item>
+        <item>@color/pocket_color_3</item>
+        <item>@color/pocket_color_4</item>
+    </integer-array>
+    <color name="overlay_progress_background">#cc152235</color>
+    <color name="prezi_button_disabled">#883181ff</color>
+    <color name="prezi_blue">#ff3181ff</color>
+    <color name="gray_3">#ffdbdfe5</color>
+    <color name="pocket_color_1">#85edb9</color>
+    <color name="pocket_color_2">#34bdb7</color>
+    <color name="pocket_color_3">#ee4458</color>
+    <color name="pocket_color_4">#fcb74d</color>
+    <color name="dark_steel">#ff152235</color>
+    <color name="dark_transparent_overlay">#cc152235</color>
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+    <color name="cod_gray">#1d1d1d</color>
+    <color name="holo_blue_dark">#0099cc</color>
+    <color name="holo_yellow_dark">#ff8800</color>
+    <color name="holo_green_dark">#669900</color>
+    <color name="holo_purple_dark">#9933cc</color>
+    <color name="holo_red_dark">#cc0000</color>
+    <color name="ten_percent_black">#1a000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_transparent_overlay">#80ffffff</color>
+    <color name="transparentWhiteColor">#CCf2f4f7</color>
+    <color name="transparentBlackColor">#CC000000</color>
+    <color name="transparentOrangeColor">#CCFA4A5B</color>
+    <color name="transparentRedColor">#CCf18173</color>
+    <color name="blue_grey">#455A64</color>
+    <color name="red">#F44336</color>
+    <color name="pink">#E91E63</color>
+    <color name="purple">#9C27B0</color>
+    <color name="deep_purple">#673AB7</color>
+    <color name="indigo">#3F51B5</color>
+    <color name="blue">#2196F3</color>
+    <color name="light_blue">#03A9F4</color>
+    <color name="cyan">#00BCD4</color>
+    <color name="teal">#009688</color>
+    <color name="green">#4CAF50</color>
+    <color name="light_green">#8BC34A</color>
+    <color name="lime">#CDDC39</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="amber">#FFC107</color>
+    <color name="orange">#FF9800</color>
+    <color name="deep_orange">#FF5722</color>
+    <color name="brown">#795548</color>
+    <color name="grey">#E0E0E0</color>
+    <color name="light_orange">#ed805e</color>
+    <color name="colorPink">#FFF06292</color>
+    <color name="colorDribble">#FF0063</color>
+    <color name="colorFacebook">#5850D3</color>
+    <color name="colorLinkedIn">#5082F6</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="colorLightBlue">#82b1ff</color>
+    <color name="colorCharcoal">#292929</color>
+    <color name="colorTans80Charcoal">#80292929</color>
+    <color name="colorFlamingo">#2BA7DB</color>
+    <color name="colorWistful">#AEA8D3</color>
+    <color name="colorHummingBird">#C5EFF7</color>
+    <color name="colorCapeHoney">#FDE3A7</color>
+    <color name="colorYellow">#FFE461</color>
+    <color name="colorPorcelain">#00E676</color>
+    <color name="colorPumice">#D2D7D3</color>
+    <color name="colorRiptide">#86E2D5</color>
+    <color name="colorShamrock">#2ECC71</color>
+    <color name="colorPorcelainTrans80">#b4ecf0f1</color>
+
+    <color name="deep_orange_100">#ffccbc</color>
+    <color name="deep_orange_700">#e64a19</color>
+    <color name="deep_purple_100">#d1c4e9</color>
+    <color name="deep_purple_700">#512da8</color>
+    <color name="dsb_disabled_color">#66939393</color>
+    <color name="dsb_progress_color">#ff009688</color>
+    <color name="dsb_ripple_color_focused">#99999999</color>
+    <color name="dsb_ripple_color_pressed">#77939393</color>
+    <color name="dsb_track_color">#ff939393</color>
+    <color name="teal_500">#009688</color>
+    <color name="teal_700">#00796b</color>
+    <color name="translucentBackgroundColor">#00000000</color>
+
+    <color name="cardview_dark_background">#ff424242</color>
+    <color name="cardview_light_background">#ffffffff</color>
+    <color name="cardview_shadow_end_color">#03000000</color>
+    <color name="cardview_shadow_start_color">#37000000</color>
+
+
+    <color name="gradientPeriodicClouds_c1">#3453d1</color>
+    <color name="gradientPeriodicClouds_c2">#6d69ff</color>
+    <color name="gradientPeriodicClouds_c3">#cd47c6</color>
+
+    <array name="gradientPeriodicClouds">
+        <item>@color/gradientPeriodicClouds_c1</item>
+        <item>@color/gradientPeriodicClouds_c2</item>
+        <item>@color/gradientPeriodicClouds_c3</item>
+    </array>
+
+    <color name="gradientCloudy_c1">#62bff5</color>
+    <color name="gradientCloudy_c2">#61b3e5</color>
+    <color name="gradientCloudy_c3">#5d8fb2</color>
+
+    <array name="gradientCloudy">
+        <item>@color/gradientCloudy_c1</item>
+        <item>@color/gradientCloudy_c2</item>
+        <item>@color/gradientCloudy_c3</item>
+    </array>
+
+    <color name="gradientMostlyCloudy_c1">#51bbf5</color>
+    <color name="gradientMostlyCloudy_c2">#71c3ee</color>
+    <color name="gradientMostlyCloudy_c3">#f3e5d2</color>
+
+    <array name="gradientMostlyCloudy">
+        <item>@color/gradientMostlyCloudy_c1</item>
+        <item>@color/gradientMostlyCloudy_c2</item>
+        <item>@color/gradientMostlyCloudy_c3</item>
+    </array>
+
+    <color name="gradientPartlyCloudy_c1">#5b64be</color>
+    <color name="gradientPartlyCloudy_c2">#6084df</color>
+    <color name="gradientPartlyCloudy_c3">#64a2ff</color>
+
+    <array name="gradientPartlyCloudy">
+        <item>@color/gradientPartlyCloudy_c1</item>
+        <item>@color/gradientPartlyCloudy_c2</item>
+        <item>@color/gradientPartlyCloudy_c3</item>
+    </array>
+
+    <color name="gradientClear_c1">#6d4fbe</color>
+    <color name="gradientClear_c2">#6c56be</color>
+    <color name="gradientClear_c3">#a189f1</color>
+
+    <array name="gradientClear">
+        <item>@color/gradientClear_c1</item>
+        <item>@color/gradientClear_c2</item>
+        <item>@color/gradientClear_c3</item>
+    </array>
+</resources>
