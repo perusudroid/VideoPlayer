@@ -1,67 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="6dp"
-    app:cardElevation="6dp">
 
-    <android.support.constraint.ConstraintLayout
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+>
 
-        <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:letterSpacing="-0.02"
-            android:lineSpacingExtra="5sp"
-            android:text="TextView"
-            android:textColor="@color/navy"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Was india better then south africa in current serise?" />
-
-        <ImageView
-            android:id="@+id/imageViewItem"
+    <com.jcminarro.roundkornerlayout.RoundKornerFrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:scaleType="matrix"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+            android:elevation="10dp"
+            app:corner_radius="16dp">
 
-        <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
-            android:id="@+id/youtube_view"
+        <com.perusudroid.player.AspectRatioFrameLayout
+                android:id="@+id/player_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+        >
+
+            <com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView
+                    android:id="@+id/youtube_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            />
+
+            <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+            />
+
+            <ImageView
+                    android:id="@+id/btnPlay"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </com.perusudroid.player.AspectRatioFrameLayout>
+
+
+    </com.jcminarro.roundkornerlayout.RoundKornerFrameLayout>
+
+    <TextView
+            android:id="@+id/video_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:gravity="start"
+            android:textColor="@android:color/black"
+            android:maxLines="2"
+            android:textSize="14sp"
+    />
+
+    <!-- <com.perusudroid.core.common.textview.HeroTextView
+             android:id="@+id/video_id"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:padding="8dp"
+             android:gravity="start"
+             android:maxLines="2"
+             android:textColor="@color/lightBlack"
+             android:textSize="14sp"
+             app:fontSize="Small"
+             app:fontType="Regular"
+     />-->
+
+
+    <!-- <TextView
+             android:id="@+id/video_id"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="start"
+             android:padding="8dp"
+             android:textColor="@color/lightBlack"
+             android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+     />
+ -->
+    <TextView
             android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
-
-        <ImageView
-            android:id="@+id/btnPlay"
-            android:layout_width="wrap_content"
+            android:id="@+id/video_description"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewItem"
-            app:layout_constraintEnd_toEndOf="@+id/imageViewItem"
-            app:layout_constraintStart_toStartOf="@+id/imageViewItem"
-            app:layout_constraintTop_toTopOf="@+id/imageViewItem"
-            app:srcCompat="@drawable/ic_play_button" />
-    </android.support.constraint.ConstraintLayout>
-</android.support.v7.widget.CardView>
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="5"
+            android:paddingBottom="8dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+    />
+
+    <!--  <ImageView
+              android:id="@+id/ivReport"
+              android:layout_gravity="end"
+              android:layout_margin="3dp"
+              android:visibility="gone"
+              android:contentDescription="@string/app_name"
+              android:src="@drawable/ic_report_black_24dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />-->
+
+</LinearLayout>

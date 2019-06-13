@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +12,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.pierfrancescosoffritti.youtubeplayer.player.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.youtubeplayer.player.YouTubePlayerView;
 
 import java.util.List;
+
+import static com.pierfrancescosoffritti.youtubeplayer.player.PlayerConstants.PlayerState.*;
 
 
 /**
@@ -31,16 +35,29 @@ public class VisibilityUtilsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
     @NonNull
     @Override
-    public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        Log.d("VisibilityUtils", "viewType " + viewType);
 
         if (viewType == 2) {
             //loading
+            return new AdViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.inflater_loading, parent, false));
         }
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.visibility_adapter_item, parent, false);
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        layoutParams.height = view.getResources().getDisplayMetrics().widthPixels;
+        layoutParams.height = view.getResources().getDisplayMetrics().widthPixels - 180;
         return new Holder(view);
+    }
+
+    private class AdViewHolder extends RecyclerView.ViewHolder {
+        public AdViewHolder(View inflate) {
+            super(inflate);
+        }
+
+        public void bind() {
+
+        }
     }
 
     @Override
@@ -48,6 +65,8 @@ public class VisibilityUtilsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         if (viewHolder instanceof Holder) {
             VisibilityItem item = mList.get(position);
             ((Holder) viewHolder).bind(item, position);
+        } else if (viewHolder instanceof AdViewHolder) {
+            ((AdViewHolder) viewHolder).bind();
         }
     }
 
@@ -71,10 +90,53 @@ public class VisibilityUtilsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
         private Holder(View itemView) {
             super(itemView);
-            textWaveTitle = itemView.findViewById(R.id.textViewTitle);
-            imageViewItems = itemView.findViewById(R.id.imageViewItem);
+            textWaveTitle = itemView.findViewById(R.id.video_id);
+            imageViewItems = itemView.findViewById(R.id.thumbnail);
             playButton = itemView.findViewById(R.id.btnPlay);
             youTubePlayerView = itemView.findViewById(R.id.youtube_view);
+
+            /*playButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    youTubePlayerView.initialize(initializedYouTubePlayer -> initializedYouTubePlayer.addListener(new AbstractYouTubePlayerListener() {
+                        @Override
+                        public void onReady() {
+                            initializedYouTubePlayer.loadVideo(mList.get(getAdapterPosition()).getYoutubeVideo(), 0);
+                        }
+
+                        @Override
+                        public void onStateChange(int state) {
+                            super.onStateChange(state);
+                            switch (state) {
+                                case UNKNOWN:
+                                    break;
+                                case UNSTARTED:
+                                    break;
+                                case ENDED:
+                                    youTubePlayerView.setVisibility(View.GONE);
+                                    imageViewItems.setVisibility(View.VISIBLE);
+                                    playButton.setVisibility(View.VISIBLE);
+                                    break;
+                                case PLAYING:
+                                    youTubePlayerView.setVisibility(View.VISIBLE);
+                                    imageViewItems.setVisibility(View.INVISIBLE);
+                                    playButton.setVisibility(View.INVISIBLE);
+                                    break;
+                                case PAUSED:
+                                    youTubePlayerView.setVisibility(View.GONE);
+                                    imageViewItems.setVisibility(View.VISIBLE);
+                                    playButton.setVisibility(View.VISIBLE);
+                                    break;
+                                case BUFFERING:
+                                    break;
+                                case VIDEO_CUED:
+                                    break;
+
+                            }
+                        }
+                    }), true);
+                }
+            });*/
         }
 
 
@@ -90,8 +152,8 @@ public class VisibilityUtilsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                         .into(imageViewItems);
             }
 
-            int color = itemView.getResources().getColor(android.R.color.holo_blue_dark);
-            textWaveTitle.setText("Position " + position);
+            int color = itemView.getResources().getColor(android.R.color.white);
+            textWaveTitle.setText(item.getTitle());
             itemView.setBackgroundColor(color);
         }
     }
@@ -100,4 +162,6 @@ public class VisibilityUtilsAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public int getItemViewType(int position) {
         return mList.get(position).getType();
     }
+
+
 }

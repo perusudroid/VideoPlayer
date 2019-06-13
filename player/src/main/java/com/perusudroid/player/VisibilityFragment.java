@@ -32,14 +32,14 @@ public class VisibilityFragment extends Fragment implements VisibilityItem.ItemC
     private VisibilityUtilsCallback mVisibilityUtilsCallback;
 
     private List<VisibilityItem> mList = new ArrayList<>(Arrays.asList(
-            new VisibilityItem("1", "zI-Pux4uaqM", "https://i.ytimg.com/vi/zI-Pux4uaqM/maxresdefault.jpg", this),
-            new VisibilityItem("2", "8ZK_S-46KwE", "https://i.ytimg.com/vi/8ZK_S-46KwE/maxresdefault.jpg", this),
-            new VisibilityItem("3", "8czMWUH7vW4", "https://i.ytimg.com/vi/8czMWUH7vW4/hqdefault.jpg", this),
-            new VisibilityItem("4", "YrQVYEb6hcc", "https://i.ytimg.com/vi/YrQVYEb6hcc/maxresdefault.jpg", this),
-            new VisibilityItem("1", "zI-Pux4uaqM", "https://i.ytimg.com/vi/zI-Pux4uaqM/maxresdefault.jpg", this),
-            new VisibilityItem("2", "8ZK_S-46KwE", "https://i.ytimg.com/vi/8ZK_S-46KwE/maxresdefault.jpg", this),
-            new VisibilityItem("3", "8czMWUH7vW4", "https://i.ytimg.com/vi/8czMWUH7vW4/hqdefault.jpg", this),
-            new VisibilityItem("4", "YrQVYEb6hcc", "https://i.ytimg.com/vi/YrQVYEb6hcc/maxresdefault.jpg", this)
+            new VisibilityItem("1", "zI-Pux4uaqM", "https://i.ytimg.com/vi/zI-Pux4uaqM/maxresdefault.jpg", this,1),
+            new VisibilityItem("2", "8ZK_S-46KwE", "https://i.ytimg.com/vi/8ZK_S-46KwE/maxresdefault.jpg", this,1),
+            new VisibilityItem("3", "8czMWUH7vW4", "https://i.ytimg.com/vi/8czMWUH7vW4/hqdefault.jpg", this,1),
+            new VisibilityItem("4", "YrQVYEb6hcc", "https://i.ytimg.com/vi/YrQVYEb6hcc/maxresdefault.jpg", this,1),
+            new VisibilityItem("1", "zI-Pux4uaqM", "https://i.ytimg.com/vi/zI-Pux4uaqM/maxresdefault.jpg", this,1),
+            new VisibilityItem("2", "8ZK_S-46KwE", "https://i.ytimg.com/vi/8ZK_S-46KwE/maxresdefault.jpg", this,1),
+            new VisibilityItem("3", "8czMWUH7vW4", "https://i.ytimg.com/vi/8czMWUH7vW4/hqdefault.jpg", this,1),
+            new VisibilityItem("4", "YrQVYEb6hcc", "https://i.ytimg.com/vi/YrQVYEb6hcc/maxresdefault.jpg", this,1)
     ));
    /*         new VisibilityItem("5", this),
             new VisibilityItem("6", this),
@@ -118,6 +118,7 @@ public class VisibilityFragment extends Fragment implements VisibilityItem.ItemC
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int scrollState) {
                 mScrollState = scrollState;
+
                 if (scrollState == RecyclerView.SCROLL_STATE_IDLE && !mList.isEmpty()) {
 
                     mListItemVisibilityCalculator.onScrollStateIdle(
@@ -129,6 +130,10 @@ public class VisibilityFragment extends Fragment implements VisibilityItem.ItemC
 
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+
+
+
+
                 if (!mList.isEmpty()) {
                     mListItemVisibilityCalculator.onScroll(
                             mItemsPositionGetter,
